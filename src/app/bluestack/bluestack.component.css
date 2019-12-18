@@ -1,0 +1,75 @@
+.main-header.blue-opaque {
+    background: #222d48;
+}
+
+.main-header:not(.absolute) {
+    position: relative;
+}
+.flex.between {
+    justify-content: space-between;
+}
+.menu-container {
+    position: relative;
+    margin: 0 auto;
+    width: calc(100% - 48px);
+    align-items: center;
+}
+.nav-tabs .nav-link.active.activetab {
+    border-bottom: 4px solid green !important;
+    color: green;
+    border: none;
+}
+.margin-6 {
+    margin: 6px;
+}
+.margin-9 {
+    margin: 9px;
+}
+.table-shadow {
+    margin-top: 3%;
+    width: 99%;
+    box-shadow: 1px 2px 2px 1px #e6e6e6;
+}
+.flex-direction span {
+   margin-left:6px;
+}
+.flex-direction{
+    display: flex;
+    flex-direction: column;
+}
+.flex-row-direction{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex {
+    display: flex;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.section-container{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.section-heading h4 {
+    font-size: xx-large;
+    font-family:sans-serif;
+    font-weight:500;
+}
+.bs-logo {
+    display: inline-block;
+}
+@media (min-width: 768px) {
+.main-header {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.main-header {
+    width: 100%;
+    z-index: 999;
+    padding-top: 9.6px;
+    padding-bottom: 9.6px;
+}
+}

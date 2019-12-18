@@ -1,0 +1,26 @@
+<div class="modal-header" style="border-bottom: none;">
+  <div class="form-row " style="width:100%;" >
+      <div class="card" style="border:none;">
+          <div class="card-body text-center" style="display: flex;padding: 0px !important;">
+              <p><img class=" img-fluid" src="{{modalData.image}}" alt="card image"></p>
+              <h6 class="card-title flex-column-reverse">C.O.D</h6>
+             
+          </div>
+      </div>
+  </div>
+</div>
+<div class="modal-body">
+  <div class="col-sm-12 col-md-12" style="padding: 0;">
+    <h4>Pricing</h4>
+  </div>
+  <div class="col-sm-12 col-md-12" style="padding: 0;">
+      <div class="row" *ngFor="let item of modalData.pricing; let i=index;">
+        <div class="col-sm-7">{{item.month}}</div>
+        <div class="col-sm-4" style="text-align: right;">{{item.price}}</div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer flex-column">
+    
+      <button type="button" (click)="activeModal.close('cancel operation')"class="btn btn-outline-dark btn-css" >Close</button>
+   </div>

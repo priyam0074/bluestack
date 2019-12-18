@@ -1,0 +1,63 @@
+<header class="main-header relative blue-opaque">
+	<div class="menu-container flex between">
+		<a href="https://www.bluestacks.com" title="BlueStacks" class="logo bs-logo">
+			<img src="https://cdn-www.bluestacks.com/bs-images/new-logo-white.png" height="50" width="166" alt=" BlueStacks Android Emulator">
+    </a>
+    </div>
+    </header>
+
+  <section class="section-container"> 
+    <div class="section-heading rows" style="margin: 50px 0;">
+      <h4>Manage Campaigns</h4>
+    </div>
+    <div class="table-tab">
+        <!-- <ngb-tabset (tabChange)="tabchange($event)"> -->
+            <ngb-tabset [activeId]="selectedTab" #tabs (tabChange)="onTabChange($event)">
+            <ngb-tab id="tab-preventchange1">
+                <ng-template ngbTabTitle><div class="tab-style"><b>Upcoming Campaigns</b></div> </ng-template>
+                <ng-template ngbTabContent>
+                    <table class="table table-shadow">
+                        <thead class="thead-light">
+                          <tr >
+                            <th *ngFor="let head of tabsetheader;let i=index;" scope="col">{{head}}</th>
+                           
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr  *ngFor="let head of tabsetdata[0].data;let i=index;"  >
+                                <td scope="row"><div class="flex-direction"><span>{{head.createdOn}}</span><span>{{head.dayAgo}}</span></div></td>
+                                <td><div class="flex-row-direction"><img src="{{head.thumb}}"  width="40"><div class="flex-direction"><span>{{head.name}}</span><span>{{head.region}}</span></div></div></td>
+                                <td><div class="flex-row-direction" (click)="openModal(head.modalData)"><span><img src="{{head.price}}"  width="40"></span><span class="margin-9">{{head.viewPrice}}</span></div></td>
+                                <td><div class="flex-row-direction"><span><img src="{{head.csv}}" width="26"></span><span class="margin-6">CSV</span> <span><img src="{{head.report}}"  width="31"></span> <span class="margin-6">Report</span> <span><img src="{{head.image_url}}"  width="32"></span><span class="margin-6">Schedule Meeting</span> </div></td>
+                              </tr></tbody>
+                              </table>
+                </ng-template>
+              </ngb-tab>
+      <ngb-tab id="tab-preventchange2">
+        <ng-template ngbTabTitle><b>Live Campaigns</b> </ng-template>
+        <ng-template ngbTabContent>
+          <table class="table table-shadow">
+            <thead class="thead-light">
+              <tr >
+                <th *ngFor="let head of tabsetheader;let i=index;" scope="col">{{head}}</th>
+               
+              </tr>
+            </thead>
+            <tbody>
+                <tr >
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr></tbody>
+                  </table>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab title="Past Campaigns" [disabled]="true">
+        <ng-template ngbTabContent>
+          <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam. Nulla facilisi. Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt eu, congue et odio. Duis pharetra et nisl at faucibus. Quisque luctus pulvinar arcu, et molestie lectus ultrices et. Sed diam urna, egestas ut ipsum vel, volutpat volutpat neque. Praesent fringilla tortor arcu. Vivamus faucibus nisl enim, nec tristique ipsum euismod facilisis. Morbi ut bibendum est, eu tincidunt odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris aliquet odio ac lorem aliquet ultricies in eget neque. Phasellus nec tortor vel tellus pulvinar feugiat.</p>
+        </ng-template>
+      </ngb-tab>
+      </ngb-tabset>
+    </div>
+  </section>

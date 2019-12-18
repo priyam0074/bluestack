@@ -1,0 +1,9 @@
+.flex-column-reverse{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: 5%;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column-reverse;
+}
