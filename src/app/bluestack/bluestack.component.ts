@@ -18,6 +18,8 @@ export class BluestackComponent implements OnInit {
   tabsetdata:any;
   tabsetheader:any;
   closeResult: any;
+  prevTab :HTMLElement;
+  nextTab: HTMLElement;
   modalData:any;
   constructor(private modalService: NgbModal) { 
     this.selectedTab = 'tab-preventchange2';
@@ -180,6 +182,13 @@ export class BluestackComponent implements OnInit {
     // }
 } 
 onTabChange($event: NgbTabChangeEvent) {
-  console.log("DSvfv");
+  console.log($event);
+  this.prevTab = document.getElementById($event.activeId);
+  this.prevTab.classList.remove("activetab");
+  this.nextTab =document.getElementById($event.nextId);
+  this.nextTab.classList.add("activetab");
+    // $('#'+ $event.activeId).removeClass('activetab');
+  // $('#'+ $event.nextId).addClass('activetab');
+
 }
 }

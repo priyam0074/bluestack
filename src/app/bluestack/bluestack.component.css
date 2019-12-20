@@ -14,13 +14,19 @@
     width: calc(100% - 48px);
     align-items: center;
 }
-.nav-tabs .nav-link.active.activetab {
+.activetab {
     border-bottom: 4px solid green !important;
-    color: green;
-    border: none;
+    color: green !important;
+    border: none !important;
 }
 .margin-6 {
     margin: 6px;
+}
+#tab-preventchange1 ul .nav-tabs {
+    border-bottom: none !important;
+}
+.table-font {
+    font-family: 'Raleway', sans-serif;
 }
 .margin-9 {
     margin: 9px;

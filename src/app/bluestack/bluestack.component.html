@@ -24,9 +24,9 @@
                           </tr>
                         </thead>
                         <tbody>
-                            <tr  *ngFor="let head of tabsetdata[0].data;let i=index;"  >
-                                <td scope="row"><div class="flex-direction"><span>{{head.createdOn}}</span><span>{{head.dayAgo}}</span></div></td>
-                                <td><div class="flex-row-direction"><img src="{{head.thumb}}"  width="40"><div class="flex-direction"><span>{{head.name}}</span><span>{{head.region}}</span></div></div></td>
+                            <tr  class="table-font" *ngFor="let head of tabsetdata[0].data;let i=index;"  >
+                                <td scope="row"><div class="flex-direction"><span>{{head.createdOn}}</span><span style="    font-size: small;">{{head.dayAgo}}</span></div></td>
+                                <td><div class="flex-row-direction"><img src="{{head.thumb}}"  width="40"><div class="flex-direction"><span>{{head.name}}</span><span style="    font-size: small;">{{head.region}}</span></div></div></td>
                                 <td><div class="flex-row-direction" (click)="openModal(head.modalData)"><span><img src="{{head.price}}"  width="40"></span><span class="margin-9">{{head.viewPrice}}</span></div></td>
                                 <td><div class="flex-row-direction"><span><img src="{{head.csv}}" width="26"></span><span class="margin-6">CSV</span> <span><img src="{{head.report}}"  width="31"></span> <span class="margin-6">Report</span> <span><img src="{{head.image_url}}"  width="32"></span><span class="margin-6">Schedule Meeting</span> </div></td>
                               </tr></tbody>
@@ -36,21 +36,21 @@
       <ngb-tab id="tab-preventchange2">
         <ng-template ngbTabTitle><b>Live Campaigns</b> </ng-template>
         <ng-template ngbTabContent>
-          <table class="table table-shadow">
-            <thead class="thead-light">
-              <tr >
-                <th *ngFor="let head of tabsetheader;let i=index;" scope="col">{{head}}</th>
-               
-              </tr>
-            </thead>
-            <tbody>
-                <tr >
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr></tbody>
-                  </table>
+            <table class="table table-shadow">
+                <thead class="thead-light">
+                  <tr >
+                    <th *ngFor="let head of tabsetheader;let i=index;" scope="col">{{head}}</th>
+                   
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-font" *ngFor="let head of tabsetdata[0].data;let i=index;"  >
+                        <td scope="row"><div class="flex-direction"><span>{{head.createdOn}}</span><span>{{head.dayAgo}}</span></div></td>
+                        <td><div class="flex-row-direction"><img src="{{head.thumb}}"  width="40"><div class="flex-direction"><span>{{head.name}}</span><span>{{head.region}}</span></div></div></td>
+                        <td><div class="flex-row-direction" (click)="openModal(head.modalData)"><span><img src="{{head.price}}"  width="40"></span><span class="margin-9">{{head.viewPrice}}</span></div></td>
+                        <td><div class="flex-row-direction"><span><img src="{{head.csv}}" width="26"></span><span class="margin-6">CSV</span> <span><img src="{{head.report}}"  width="31"></span> <span class="margin-6">Report</span> <span><img src="{{head.image_url}}"  width="32"></span><span class="margin-6">Schedule Meeting</span> </div></td>
+                      </tr></tbody>
+                      </table>
         </ng-template>
       </ngb-tab>
       <ngb-tab title="Past Campaigns" [disabled]="true">
